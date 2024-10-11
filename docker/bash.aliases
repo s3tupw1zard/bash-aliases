@@ -1,0 +1,29 @@
+######################
+### Docker Aliases ###
+######################
+
+# Add sudo in front of every docker command execution
+alias docker='sudo docker'
+
+# Start the docker compose stack in the current directory
+alias dcu="docker compose up -d"
+
+# Start the docker compose stack in the current directory and rebuild the images
+alias dcub="docker compose up -d --build"
+
+# Stop, delete (down) or down and then up the docker-compose stack in the current directory
+alias dcs="docker compose stop"
+alias dcd="docker compose down"
+
+alias dcr="docker compose down && docker compose up -d"
+
+# Show the logs for the docker-compose stack in the current directory
+# May be extended with the service name to get service-specific logs, like
+# 'dcl php' to get the logs of the php container
+alias dcl="docker-compose logs"
+
+# Quickly run the docker exec command like this: 'dex container-name bash'
+alias dex="docker exec -it"
+
+# Quzickly run the docker compose exec command like this: 'dcex container_name bash'
+alias dcex="docker compose exec"
